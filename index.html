@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!-- made by BLOODY9 with ❤, 2018 -->
 <html>
@@ -72,10 +73,10 @@
 			position: relative;
 			text-align: center;
 			word-wrap: normal;
-			width:480px;
+			width:500px;
 			background-color: white;
 			opacity: 0.8;
-			border-radius: 10px;
+			border-radius: 5px;
 
 			animation-name: blurCard; 
 			animation-duration:2s; 
@@ -116,18 +117,32 @@
 			<div class="mdui-progress" id="load">
 				<div class="mdui-progress-indeterminate"></div>
 			</div>
-			<h6 id="about">爱好ACG、Web安全、前端、摄影，伪宅一名。</h6>
+			<h6 id="about">渗透测试工程师、死肥宅。</h6>
 			<br>
 			<div class="mdui-tab mdui-tab-full-width" mdui-tab="" id="link">
-				<a href="https://user.qzone.qq.com/2662331990" class="mdui-ripple mdui-tab-active">企鹅</a>
+				<a href="https://user.qzone.qq.com/2662331990" class="mdui-ripple">企鹅</a>
 				<a href="https://weibo.com/666Bloody" class="mdui-ripple">微博</a>
 				<a href="https://space.bilibili.com/9842740" class="mdui-ripple">哔哩</a>
-				<a href="https://t.me/bIoody" class="mdui-ripple">电报</a>
+				<a href="https://jq.qq.com/?_wv=1027&k=5hUj9ax" class="mdui-ripple">群组</a>
 			</div>
 			<script type="text/javascript">
+				var offDutyTime = getOffDutyTime(17);
+				var about = document.getElementById("about");
+				about.innerHTML = about.innerHTML + offDutyTime;
+				function getOffDutyTime(time) {
+					var now = (new Date()).getHours();
+					now = Number(now);
+					if (now<time) {
+						var interval = time - now;
+						return "距离下班大概还有"+interval+"小时吧。";
+					} else if (now>time) {
+						var interval = now - time;
+						return "看来下班已经有"+interval+"小时了呀。";
+					}
+				}
 				var ua = /Android|Windows Phone|webOS|iPhone|iPod|BlackBerry|iPad/i;
 				if(ua.test(navigator.userAgent)){
-					window.location='https://user.qzone.qq.com/2662331990';
+					window.location="https://user.qzone.qq.com/2662331990";
 				}
 			</script>
 		</div>
