@@ -140,7 +140,7 @@
 							return "还有不到一个小时下班啦。"
 						}
 						return "距离下班大概还有"+interval+"小时吧。";
-					} else if (now>time) {
+					} else {
 						var interval = now - time;
 						if (checkHalfHour()) { interval = interval + 1; }
 						if (interval == 0) { 
@@ -149,17 +149,17 @@
 						return "看来下班已经有"+interval+"小时了呀。";
 					}
 				}
-				var ua = /Android|Windows Phone|webOS|iPhone|iPod|BlackBerry|iPad/i;
-				if(ua.test(navigator.userAgent)){
-					window.location="https://user.qzone.qq.com/2662331990";
-				}
 				function checkHalfHour() {
 					var min = (new Date()).getMinutes();
 					if (min>30) {
 						return true;
-					} else if (min<30) {
+					} else (min<30) {
 						return false;
 					}
+				}
+				var ua = /Android|Windows Phone|webOS|iPhone|iPod|BlackBerry|iPad/i;
+				if(ua.test(navigator.userAgent)){
+					window.location="https://user.qzone.qq.com/2662331990";
 				}
 			</script>
 		</div>
