@@ -18,7 +18,7 @@
 			color: #333333;
 		}
 		body{
-			background:url("https://wx1.sinaimg.cn/large/00638Kv5ly1free9vwhnjj311y0lc111.jpg") no-repeat;
+			background:url("source/cover.jpg") no-repeat;
 			background-position: center center;
 			background-size: 100%;
 		}
@@ -135,15 +135,25 @@
 					now = Number(now);
 					if (now<time) {
 						var interval = time - now;
+						if (checkHalfHour()) { interval = interval - 1; }
 						return "距离下班大概还有"+interval+"小时吧。";
 					} else if (now>time) {
 						var interval = now - time;
+						if (checkHalfHour()) { interval = interval + 1; }
 						return "看来下班已经有"+interval+"小时了呀。";
 					}
 				}
 				var ua = /Android|Windows Phone|webOS|iPhone|iPod|BlackBerry|iPad/i;
 				if(ua.test(navigator.userAgent)){
 					window.location="https://user.qzone.qq.com/2662331990";
+				}
+				function checkHalfHour() {
+					var min = (new Date()).getMinutes();
+					if (min>30) {
+						return true;
+					} else if (min<30) {
+						return false;
+					}
 				}
 			</script>
 		</div>
