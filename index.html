@@ -135,26 +135,19 @@
 					now = Number(now);
 					var interval = time - now;
 					if (interval > 0) {
-						if (checkHalfHour()) {
-							interval = interval - 1;
-							if (interval==0) { return "还有不到一个小时下班。"; }
-						} else { return "距离下班大概还有"+interval+"小时吧。"; }
+						return "距离下班大概还有"+interval+"小时吧。";
 					} else if (interval < 0) {
-						if (!checkHalfHour()) { interval = interval + 1; }
 						return "看来下班已经有"+interval+"小时了呀。";
-					}
-				}
-				function checkHalfHour() {
-					var min = (new Date()).getMinutes();
-					if (min>30) {
-						return true;
-					} else if (min<30) {
-						return false;
+					} else if (interval == 0) {
+						return "现在正在下班渡劫的时段中。";
 					}
 				}
 				var ua = /Android|Windows Phone|webOS|iPhone|iPod|BlackBerry|iPad/i;
+				var jump = window.location.hash.substr(1);
 				if(ua.test(navigator.userAgent)){
-					window.location="https://user.qzone.qq.com/2662331990";
+					if (jump=="true") {} else {
+						window.location="https://user.qzone.qq.com/2662331990";
+					}
 				}
 			</script>
 		</div>
