@@ -18,7 +18,7 @@
 			color: #333333;
 		}
 		body{
-			background:url("https://wx1.sinaimg.cn/large/00638Kv5ly1free9vwhnjj311y0lc111.jpg") no-repeat;
+			background:url("source/cover.jpg") no-repeat;
 			background-position: center center;
 			background-size: 100%;
 		}
@@ -135,12 +135,12 @@
 					now = Number(now);
 					var interval = time - now;
 					if (interval > 0) {
-						if (checkHalfHour()) { interval = interval - 1; }
-						return "距离下班大概还有"+interval+"小时吧。";
-					} else if (interval == 0) {
-						return true;
+						if (checkHalfHour()) {
+							interval = interval - 1;
+							if (interval==0) { return "还有不到一个小时下班。"; }
+						} else { return "距离下班大概还有"+interval+"小时吧。"; }
 					} else if (interval < 0) {
-						if (checkHalfHour()) { interval = interval + 1; }
+						if (!checkHalfHour()) { interval = interval + 1; }
 						return "看来下班已经有"+interval+"小时了呀。";
 					}
 				}
