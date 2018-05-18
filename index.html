@@ -133,19 +133,14 @@
 				function getOffDutyTime(time) {
 					var now = (new Date()).getHours();
 					now = Number(now);
-					if (now<time) {
-						var interval = time - now;
+					var interval = time - now;
+					if (interval > 0) {
 						if (checkHalfHour()) { interval = interval - 1; }
-						if (interval == 0) { 
-							return "还有不到一个小时下班啦。"
-						}
 						return "距离下班大概还有"+interval+"小时吧。";
-					} else {
-						var interval = now - time;
+					} else if (interval == 0) {
+						return true;
+					} else if (interval < 0) {
 						if (checkHalfHour()) { interval = interval + 1; }
-						if (interval == 0) { 
-							return "刚刚下班不到一个小时啊。"
-						}
 						return "看来下班已经有"+interval+"小时了呀。";
 					}
 				}
