@@ -133,7 +133,7 @@
 				function getOffDutyTime(time) {
 					var now = (new Date()).getHours();
 					now = Number(now);
-					var interval = time - now;
+					var interval = now - time;
 					if (interval > 0) {
 						return "距离下班大概还有"+interval+"小时吧。";
 					} else if (interval < 0) {
