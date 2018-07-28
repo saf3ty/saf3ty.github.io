@@ -1,157 +1,20 @@
-
-
-<!DOCTYPE html>
-<!-- made by BLOODY9 with ❤, 2018 -->
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>BLOODY9</title>
-	<link rel="stylesheet" type="text/css" href="source/mdui.min.css">
-	<script src="source/mdui.min.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-		html,body{
-			margin: 0;
-			padding: 0;
-			height: 100%;
-			width: 100%;
-			font-family: PingFang SC, RobotoDraft, Roboto, Helvetica Neue, Helvetica, Arial, STHeiti, Microsoft YaHei, sans-serif;
-			color: #333333;
-		}
-		body{
-			background:url("source/cover.jpg") no-repeat;
-			background-position: center center;
-			background-size: 100%;
-		}
-		h6{
-			margin: 0;
-			padding: 0;
-			line-height: 0;
-		}
-		a:hover{
-			color: #3f51b5;
-			opacity: 1;
-		}
-		.all-box{
-			display: block;
-			position: relative;
-		}
-		@keyframes blurCard {
-			0% {
-				filter: blur(0px);
+	<title>nuuux</title>
+	<head>
+		<style type="text/css">
+			img {
+				border-radius: 30px;
+				border-color: black;
+				border-width:   1px;
 			}
-			50% {
-				filter: blur(2px);
+			h1  {
+				font-family: 'Microsoft YaHei';
+				text-align: center;
 			}
-			100% {
-				filter: blur(0px);
-			}
-		}
-		@keyframes fadeIn {
-			0% {
-				opacity: 0; 
-			}
-			50% {
-				opacity: 0; 
-			}
-			100% {
-				opacity: 1; 
-			}
-		}
-		@keyframes fadeOut {
-			0% {
-				opacity: 1; 
-			}
-			50% {
-				opacity: 1; 
-			}
-			100% {
-				opacity: 0; 
-			}
-		}
-		
-		#card{
-			position: relative;
-			text-align: center;
-			word-wrap: normal;
-			width: 600px;
-			background-color: white;
-			opacity: 0.8;
-			border-radius: 10px;
-			box-shadow: 0 0 5px gray;
-
-			animation-name: blurCard; 
-			animation-duration:2s; 
-			animation-iteration-count: 1; 
-			animation-delay: 0s; 
-		}
-		#title{
-			animation-name: fadeIn; 
-			animation-duration:2s; 
-			animation-iteration-count: 1; 
-			animation-delay: 0s; 
-		}
-		#about{
-			animation-name: fadeIn; 
-			animation-duration:4s; 
-			animation-iteration-count: 1; 
-			animation-delay: 0s; 
-		}
-		#link{
-			animation-name: fadeIn; 
-			animation-duration: 5s; 
-			animation-iteration-count: 1; 
-			animation-delay: 0s; 
-		}
-		#load{
-			animation-name: fadeOut; 
-			animation-duration: 3s; 
-			animation-iteration-count: 1; 
-			animation-delay: 0s; 
-			opacity: 0;
-		}
-	</style>
-</head>
-<body class="mdui-valign mdui-loaded" onselectstart="return false">
-	<div class="mdui-container" id="card">
-		<div class="mdui-row mdui-center all-box">
-			<h1 class="" id="title">BLOODY9</h1>
-			<div class="mdui-progress" id="load">
-				<div class="mdui-progress-indeterminate"></div>
-			</div>
-			<h6 id="about">渗透测试工程师、死肥宅。</h6>
-			<br>
-			<div class="mdui-tab mdui-tab-full-width" mdui-tab="" id="link">
-				<a href="https://user.qzone.qq.com/2662331990" class="mdui-ripple">企鹅</a>
-				<a href="https://n9t.github.io" class="mdui-ripple">博客</a>
-				<a href="https://space.bilibili.com/9842740" class="mdui-ripple">哔哩</a>
-				<a href="https://jq.qq.com/?_wv=1027&k=5hUj9ax" class="mdui-ripple">群组</a>
-			</div>
-			<script type="text/javascript">
-				var offDutyTime = getOffDutyTime(17);
-				var about = document.getElementById("about");
-				about.innerHTML = about.innerHTML + offDutyTime;
-				function getOffDutyTime(time) {
-					var now = (new Date()).getHours();
-					now = Number(now);
-					var interval = now - time;
-					if (interval < 0) {
-						return "距离下班大概还有"+(-1*interval)+"小时吧。";
-					} else if (interval > 0) {
-						return "看来下班已经有"+interval+"小时了呀。";
-					} else if (interval == 0) {
-						return "现在正在下班渡劫的时间段中。";
-					}
-				}
-				var ua = /Android|Windows Phone|webOS|iPhone|iPod|BlackBerry|iPad/i;
-				var jump = window.location.hash.substr(1);
-				if(ua.test(navigator.userAgent)){
-					if (jump=="true") {} else {
-						window.location="https://user.qzone.qq.com/2662331990";
-					}
-				}
-			</script>
-		</div>
-	</div>
-</body>
+		</style>
+	</head>
+	<body>
+		<img src="x.jpg" />
+		<h1>行吧 和你说句话就可以了</h1>
+	</body>
 </html>
