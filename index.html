@@ -34,7 +34,9 @@
 			<p>From DogSun, 2018</p>
 		</strong>
 		<script>
-			document.title = decodeURI(window.location.hash.substr(1));
+			if(window.location.hash){
+				document.title = decodeURI(window.location.hash.substr(1));
+			}
 		</script>
 	</body>
 </html>
