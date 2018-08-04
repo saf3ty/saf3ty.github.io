@@ -19,7 +19,7 @@
 		<h1>你 妈 死 了</h1>
 		<h1>N M S L</h1>
 		<script>
-			document.title = window.location.hash.substr(1);
+			document.title = decodeURI(window.location.hash.substr(1));
 		</script>
 	</body>
 </html>
