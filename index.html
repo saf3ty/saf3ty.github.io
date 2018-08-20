@@ -1,41 +1,47 @@
 <html>
-	<title>NMSL</title>
+	<meta charset="utf-8">
+	<title>蘭</title>
 	<head>
 		<style type="text/css">
 			body{
-				padding-top: 3em;
+				padding-top: 10%;
+				background: #778899;
+				}
+			iframe {
+				border: none;
+				width: 330px;
+				height: 86px;
 			}
-			img {
-				width: 400px;
-				box-shadow: 0 0 5px #000000;
-				border-radius: 10px;
-			}
-			h1, p  {
+			h1, p {
+				color: #708090;
 				font-family: 'Microsoft YaHei';
 				text-align: center;
-				text-shadow: 0 0 5px #696969;
+				line-height: 50%;
+				text-shadow: 0 0 1px #708090;
+				transition: all .28s ease-in .1s;
 			}
-			.image {
-				width: 400px;
+			h1:hover, p:hover {
+				color: #696969;
+				text-shadow: 0 0 1px #696969;
+			}
+			.iframe {
+				width: 330px;
 				margin: 0 auto;
-				padding-bottom: 30px;
 			}
 		</style>
 	</head>
 	<body onselectstart="return false">
-		<div class="image">
-			<img src="x.jpg" alt="对不起做不到"/>
+		<div class="iframe">
+			<iframe src="https://music.163.com/outchain/player?id=459733581"></iframe>
 		</div>
 		<strong>
-			<h1>崽种 ，你妈死了</h1>
-			<h1>CUB , UR MOM DIED</h1>
 			<br>
-			<p>From DogSun, 2018</p>
+			<h1>几级的狂风被我吹翻</h1>
+			<h1>几份的报告把我写完</h1>
+			<h1>几片的乌云将雨收回</h1>
+			<h1>而唯一的你思念着我</h1>
+			<br>
+			<h1>可我却是个对不起你的肥宅、废柴</h1>
 		</strong>
-		<script>
-			if(window.location.hash){
-				document.title = decodeURI(window.location.hash.substr(1));
-			}
-		</script>
 	</body>
 </html>
